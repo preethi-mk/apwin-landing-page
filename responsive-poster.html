@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApWin247 - High-Impact Betting Ad (Premium)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Define the Richer Gold color variables */
+      :root {
+        --gold-color: #daa520; /* Goldenrod - Richer Gold */
+        --gold-light: #ffea8d;
+        --gold-dark: #a8861c; /* Darker Gold for contrast */
+        --dark-contrast: #333333;
+        --orange-gold: #ffc000;
+        --whatsapp-green: #25d366;
+        --whatsapp-darker: #128c7e;
+      }
+
+      /* ************************************************* */
+      /* ANIMATIONS */
+      /* ************************************************* */
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* ************************************************* */
+      /* FAST, PERSISTENT "POPUP" ANIMATION FOR CTA BUTTON */
+      /* ************************************************* */
+      @keyframes subtle-float-and-glow {
+        0%,
+        100% {
+          transform: translateY(0) scale(1.02); /* Slightly lifted, slightly larger */
+          box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6), 0 0 12px var(--gold-light); /* Soft glow */
+        }
+        50% {
+          transform: translateY(-3px) scale(1.03); /* Lifts a bit more, slightly larger */
+          box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8), 0 0 20px var(--gold-color); /* Brighter, more defined glow */
+        }
+      }
+
+      /* Base Styles: Mobile-first - USING POPPINS */
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        background-color: #000;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
+      /* ************************************************* */
+      /* POSTER CLICKABLE WRAPPER (No hover effects) */
+      /* ************************************************* */
+      .poster-link-wrapper {
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        max-width: 800px;
+        /* Set cursor to pointer for the entire area */
+        cursor: pointer;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        background: url("background.jpg") no-repeat center center;
+        background-size: cover;
+        padding: 10px 15px 20px 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        transition: box-shadow 0.3s ease;
+      }
+
+      /* Background Overlay */
+      .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        z-index: 1;
+      }
+
+      /* Z-index for all content */
+      .header-logo,
+      .header-slogan,
+      .claim-bonus-section-group,
+      .small-print,
+      .whatsapp-button,
+      .footer-features,
+      .footer-games,
+      .feature-box-wrapper {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* LARGE LOGO */
+      .logo-image {
+        max-width: 380px;
+        height: auto;
+        margin-bottom: -15px;
+        margin-top: 5px;
+        filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.9)) brightness(1.2);
+      }
+
+      /* PROFESSIONAL SLOGAN */
+      .header-slogan {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        color: var(--gold-light);
+        text-shadow: 1px 1px 2px #000;
+        padding: 5px 15px;
+        border-radius: 5px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      /* BONUS SECTION */
+      .claim-bonus-section-group {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+
+      /* CLAIM YOUR BOX */
+      .claim-text-wrapper {
+        background-image: linear-gradient(
+          to right,
+          var(--gold-light),
+          var(--gold-color)
+        );
+        padding: 5px 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+        max-width: 280px;
+        width: 85%;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        white-space: nowrap;
+      }
+
+      .claim-text-wrapper::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border: 1px solid var(--gold-color);
+        border-radius: 12px;
+        z-index: -1;
+        transform: none;
+      }
+
+      /* "CLAIM YOUR" TEXT STYLE */
+      .claim-text {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: var(--dark-contrast);
+        text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+        margin: 0;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+      }
+
+      /* MAIN BONUS SECTION - PREMIUM ANIMATION */
+      .main-bonus-section {
+        background-image: linear-gradient(
+          to right,
+          #111 0%,
+          var(--gold-color) 25%,
+          var(--orange-gold) 50%,
+          #111 75%,
+          var(--gold-color) 100%
+        );
+        background-size: 300% 100%;
+        animation: gradient-shift 5s linear infinite;
+
+        padding: 10px 15px;
+        margin-top: 0;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        max-width: 450px;
+        width: 90%;
+        position: relative;
+        z-index: 2;
+        padding-top: 30px;
+        padding-bottom: 5px;
+      }
+
+      /* White Border on the bonus box */
+      .main-bonus-section::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border: 2px solid #ffffff;
+        border-radius: 20px;
+        z-index: -1;
+      }
+
+      /* BONUS TEXT - ANTON FONT */
+      .bonus-percentage,
+      .bonus-now {
+        font-family: "Anton", sans-serif;
+        text-transform: uppercase;
+        line-height: 0.9em;
+        letter-spacing: 0.08em;
+        color: #ffffff;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .bonus-percentage {
+        font-size: 2em;
+      }
+
+      .bonus-now {
+        font-size: 1.4em;
+      }
+
+      /* SMALL PRINT (CASHBACK) - POPPINS FONT */
+      .small-print {
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: var(--gold-color);
+        text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
+        letter-spacing: 0.02em;
+      }
+
+      /* WHATSAPP BUTTON (Now a DIV, looks like a button, but entire poster is the link) */
+      .whatsapp-button {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--whatsapp-green);
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.4em;
+        font-weight: bold;
+
+        transition: all 0.2s ease-in-out;
+
+        max-width: 95%;
+        border: 3px solid var(--gold-color);
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 0.05em;
+        margin-top: 15px;
+
+        /* Keep a pointer cursor for the button area as well */
+        cursor: pointer;
+
+        /* ************************************************* */
+        /* FAST, PERSISTENT ANIMATION (1.5s) */
+        /* ************************************************* */
+        animation: subtle-float-and-glow 1.5s infinite ease-in-out;
+      }
+
+      /* WHATSAPP ICON - Gold/Black for max contrast */
+      .whatsapp-icon {
+        margin-right: 10px;
+        margin-bottom: 0;
+        font-size: 2.5em;
+
+        color: #000000;
+        background: var(--gold-light);
+        border-radius: 50%;
+        padding: 3px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      .whatsapp-button br {
+        display: none;
+      }
+
+      /* CTA TEXT COLOR CHANGE FOR CONTRAST - WITH WHITE BORDER */
+      .button-text {
+        color: #000000;
+        font-weight: 800;
+
+        /* LIGHT TEXT BORDER/OUTLINE */
+        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+          1px 1px 0 #ffffff, 0 0 5px rgba(255, 255, 255, 0.7);
+      }
+
+      /* --- FEATURE BOX WRAPPER --- */
+      .feature-box-wrapper {
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        padding: 8px 10px;
+        max-width: 95%;
+        margin-top: 20px;
+      }
+
+      /* Footer Feature Section (POPPINS FONT) */
+      .footer-features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        margin: 2px 0;
+        font-size: 0.9em;
+        font-weight: 700;
+        color: #ffffff;
+
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+          1px 1px 0 #000, 0 0 5px rgba(255, 255, 255, 0.5);
+      }
+
+      .feature-icon {
+        margin-right: 5px;
+        font-size: 1.3em;
+        color: #ffffff;
+        text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+          -1px 1px 0 #000;
+      }
+
+      /* Footer Games - POPPINS FONT */
+      .footer-games {
+        margin-top: 15px;
+        font-size: 0.9em;
+        padding: 0 10px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 0 0 5px var(--gold-light), 0 0 10px var(--gold-color),
+          1px 1px 2px rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.1em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      /* Style for individual game icons */
+      .game-icon {
+        margin-right: 3px;
+        font-size: 1.2em;
+        color: var(--gold-color);
+        text-shadow: none;
+        vertical-align: middle;
+      }
+
+      /* The separator dot style */
+      .footer-games span {
+        margin: 0 0px;
+        font-weight: 700;
+        color: var(--gold-color);
+        text-shadow: none;
+      }
+
+      /* New style to group icon and text when wrapping is needed */
+      .game-item-wrap {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      /* ---------------------------------------------------------------------- */
+      /* RESPONSIVENESS: Media Queries for Tablet/Desktop */
+      /* ---------------------------------------------------------------------- */
+
+      @media (min-width: 600px) {
+        .container {
+          padding: 15px 20px 30px 20px;
+        }
+
+        .logo-image {
+          max-width: 500px;
+          margin-bottom: -20px;
+          margin-top: 10px;
+        }
+
+        .header-slogan {
+          font-size: 1em;
+          margin-bottom: 15px;
+          margin-top: 0px;
+        }
+
+        .bonus-percentage {
+          font-size: 2.8em;
+        }
+
+        .bonus-now {
+          font-size: 1.8em;
+        }
+
+        .small-print {
+          font-size: 1.2em;
+          margin-top: 10px;
+        }
+
+        .whatsapp-button {
+          flex-direction: row;
+          padding: 20px 45px;
+          font-size: 1.6em;
+        }
+        .whatsapp-icon {
+          margin-right: 15px;
+          margin-bottom: 0;
+          font-size: 2.2em;
+        }
+        .whatsapp-button br {
+          display: initial;
+        }
+
+        .footer-features {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        .feature-item {
+          font-size: 1em;
+          margin: 0 15px;
+        }
+        .footer-games {
+          font-size: 1em;
+          margin-top: 20px;
+          gap: 15px;
+          flex-wrap: nowrap;
+        }
+        .feature-box-wrapper {
+          max-width: 700px;
+          padding: 12px 20px;
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <a href="https://wa.me/917095047665" class="poster-link-wrapper">
+      <div class="container">
+        <img src="apwin247_logo.png" alt="ApWin247 Logo" class="logo-image" />
+
+        <div class="header-slogan">
+          ASIA'S MOST TRUSTED PLATFORM. ESTABLISHED 2019.
+        </div>
+
+        <div class="claim-bonus-section-group">
+          <div class="claim-text-wrapper">
+            <p class="claim-text">CLAIM YOUR</p>
+          </div>
+          <div class="main-bonus-section">
+            <p class="bonus-percentage">300% WELCOME</p>
+            <p class="bonus-now">BONAS NOW!</p>
+          </div>
+        </div>
+
+        <p class="small-print">2% INSTANT CASHBACK ON EVERY REFILL!</p>
+
+        <div class="whatsapp-button">
+          <i class="fab fa-whatsapp whatsapp-icon"></i>
+          <span class="button-text">GET YOUR INSTANT WHATSAPP ID</span>
+        </div>
+
+        <div class="feature-box-wrapper">
+          <div class="footer-features">
+            <div class="feature-item">
+              <i class="fas fa-check-circle feature-icon"></i> 24/7 INSTANT
+              REFILLS
+            </div>
+            <div class="feature-item">
+              <i class="fas fa-wallet feature-icon"></i> 24/7 GUARANTEED
+              WITHDRAWALS
+            </div>
+          </div>
+        </div>
+        <div class="footer-games">
+          <div class="game-item-wrap">
+            <i class="fas fa-baseball-ball game-icon"></i> CRICKET
+          </div>
+          <span>•</span>
+          <div class="game-item-wrap">
+            <i class="fas fa-futbol game-icon"></i> FOOTBALL
+          </div>
+          <span>•</span>
+          <div class="game-item-wrap">
+            <i class="fas fa-table-tennis-paddle-ball game-icon"></i> TENNIS
+          </div>
+          <span>•</span>
+          <div class="game-item-wrap">
+            <i class="fas fa-dice game-icon"></i> CASINO
+          </div>
+          <span>•</span>
+          <div class="game-item-wrap">
+            <i class="fas fa-clone game-icon"></i> LIVE POKER
+          </div>
+        </div>
+      </div>
+    </a>
+  </body>
+</html>
